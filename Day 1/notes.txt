@@ -1,0 +1,95 @@
+Date- 30/06/24                                                                        JAVA           
+---------------                                                                  -------------
+
+----------------------------------------------------------------------------------------------
+
+
+1) Output::
+
+system.out.print("hello world");
+
+system.out.println("hello world");
+
+// println use to shift the next line.
+// otherwise use escaoe charachter for shift to next line.
+
+----------------------------------------------------------------------------------------------
+
+2)VARIABLE::
+
+Varible is just like a container which is use to store some data and may change many time 
+
+example:  if we use to calculate the area of a rectangle we need two variable 
+          for two side 
+
+          suppose , a = 10cm
+                    b = 15cm
+          so the area,
+                    c = (a*b) = 150 cm^2
+        
+          Here a,b,c are variable.
+
+Every varible contains adress or memory location.
+
+----------------------------------------------------------------------------------------------
+
+
+3) DATA TYPES:: 
+
+in JAVA there are two types of data type 
+
+    a) Primitive (8) :
+
+              -byte     -> 1byte
+              -short    -> 2byte
+              -char     -> 2byte
+              -boolean  -> 1byte       [64 bit system]
+              -int      -> 4byte
+              -long     -> 8byte
+              -float    -> 4byte
+              -double   -> 8byte
+                   
+    b) Non Primitive (5) :
+
+              -String
+              -Array
+              -Class
+              -Object
+              -Interface
+
+[JAVA is a typedef language i.e. we need to define the data type after using the variable]
+
+Q) a=10,b=5;
+                    a x b
+   To calculate =  --------
+                    a - b  
+    a) int ans = a*b/a-b       // 0
+    b) int ans = (a*b)/(a-b)   // 10
+     
+----------------------------------------------------------------------------------------------
+
+4) Input::
+
+for getting the input from the user we need to import the - " import java.util.*; "
+                                                 Then use - "Scanner sc = new Scanner(System.in);"
+
+This sc is the scanner object now we take the input by using this "sc".
+
+Example-
+            String name = sc.next();  // this next represent for the terminating scanning 
+                                          another aproches are "nextLine, nextFloat, nextChar......."              
+            System.out.println(name);
+
+
+Q) Take two numbers a and b and print their sum.
+
+----------------------------------------------------------------------------------------------
+
+5) CONDITIONAL STATEMENT::
+
+   -if , else
+   -else if
+   -switch
+   -break
+   
+    
