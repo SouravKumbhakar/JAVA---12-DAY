@@ -61,7 +61,7 @@ in JAVA there are two types of data type
 
 Q) a=10,b=5;
                     a x b
-   To calculate =  --------
+   To calculate =  -------- = 10
                     a - b  
     a) int ans = a*b/a-b       // 0
     b) int ans = (a*b)/(a-b)   // 10
@@ -70,7 +70,7 @@ Q) a=10,b=5;
 
 4) Input::
 
-for getting the input from the user we need to import the - " import java.util.*; "
+for getting the input from the user we need to import the - "import java.util.*; "
                                                  Then use - "Scanner sc = new Scanner(System.in);"
 
 This sc is the scanner object now we take the input by using this "sc".

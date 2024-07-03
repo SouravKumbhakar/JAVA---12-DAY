@@ -1,0 +1,43 @@
+Date- 03/07/24                                                                        JAVA           
+---------------                                                                  -------------
+
+----------------------------------------------------------------------------------------------
+6) Loops::
+
+    Loops are use to repeating some task.
+
+    a) For loop-
+
+        for(initialization; condition; updation){
+            //do something
+        }
+
+        #initialisation]- makes a varible which contains some value from which loop starts.
+        #condition]- its a statement or condition or terminating condition which define how 
+                     far the loop will run.
+
+        * [if there is no terminating condition this makes infinite loop]      
+
+        #updation]- update the value of some varible .
+
+
+    b) While loop-
+
+        while(condition){
+            //do something
+        }
+
+        same as for loop but here we consider loop w.r.t the condition(only)
+        here we initialize the value before the loop and update condition 
+        inside the loop scope.
+
+    c) Do while loop-
+
+        do{
+            //do something
+        }while(condition);
+
+        here we perform our task in the do scope and the condition will take
+        place in while loop. 
+
+        *[in that case if the condition never satisfy thus the code will run for one time fo the do scope].
