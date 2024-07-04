@@ -118,3 +118,260 @@ ans =  row(4), column(5), for 2nd and 3rd row there was 3 space
             System.out.println();
         }   
 
+
+    Q) print the pattern>
+
+    * * * *
+    * * *
+    * *         Decreasing pyramid
+    *
+
+    ans =  no of row 4, no of  column 4 . same as the previous question but this time
+            the inner loop contain the total column no i.e j = 4 then for the next loop
+            for row two j value Decreasing.
+
+            
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<n-i ; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        //ANOTHER APPROCH
+
+        for(int i=n; i>=0 ; i--){
+            for(int j=0; j<i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+
+    Q) print the pattern>
+
+          *
+        * *        inverted half pyramid
+      * * *
+    * * * *
+
+    ans=> 
+
+          *     -> 3 spaces 1 star
+        * *     -> 2 spaces 2 star 
+      * * *     -> 1 spaces 3 star 
+    * * * *     -> 0 spaces 4 star
+
+    by observing this pattern w egot that the spaces are decreasing from (n-1) to 0 
+    and stars are increasing from 1 to n ;
+
+    
+        for(int i=1 ; i<=n; i++){ //1 to 4
+            for(int k=n-1; k>=i; k--){ //k=3
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i ; j++ ){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+    Q) print the pattern>
+
+    1
+    1 2
+    1 2 3       half pyramid with number
+    1 2 3 4
+    1 2 3 4 5
+
+ans= 
+
+    1           -> row no 1 >> number print 1 to 1
+    1 2         -> row no 2 >> number print 1 to 2      
+    1 2 3       -> row no 3 >> number print 1 to 3
+    1 2 3 4     -> row no 4 >> number print 1 to 4
+    1 2 3 4 5   -> row no 5 >> number print 1 to 5
+
+    in that case in every row the number or no. is increrasing mean inner loop  value is increasing
+
+
+        for(int i=1; i<=n ; i++){
+            for(int j=1; j<=i;j++){
+                System.out.print(" "+j);
+            }
+            System.out.println();
+        }
+
+
+
+    Q) print the pattern>
+
+    1 2 3 4 5
+    1 2 3 4
+    1 2 3       inverted half pyramid with number
+    1 2 
+    1 
+
+ans= 
+
+    1 2 3 4 5      -> row no 1 >> number print 1 to 5
+    1 2 3 4        -> row no 2 >> number print 1 to 4      
+    1 2 3          -> row no 3 >> number print 1 to 3
+    1 2            -> row no 4 >> number print 1 to 2
+    1              -> row no 5 >> number print 1 to 1
+
+
+    Thats mean the inner loop running from 1 to n-i where n= row number and i is 
+    increasing 0 to n-1
+
+
+       for(int i=0 ; i<n; i++){
+            for(int j= 1 ; j <= n-i ; j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+       }
+
+
+       
+    Q) print the pattern>
+
+    1
+    2  3
+    4  5  6       Floyids tringle
+    7  8  9  10
+    11 12 13 14 15 
+
+    ans=
+
+        for this tringle we observed that for each point number was increasing ; 
+        so we have to print the number which present outside the loop and increment in the inner loop
+        and we print the value in the inner loop
+
+       int k = 1;
+       for(int i=0 ; i<n; i++){
+            for(int j= 0 ; j <= i ; j++){
+                System.out.print(k+ " ");
+                k++;
+            }
+            System.out.println();
+       }
+
+    Q) print the pattern>
+
+    1
+    0 1
+    1 0 1
+    0 1 0 1
+    1 0 1 0 1
+
+    ans=> 
+
+    if we observed this as a matrix form 
+
+    (1,1)
+      1                             As we see that where the sum of i and j (row and col number ) are
+    (2,1) (2,2)                     even there is =>1
+      0     1                       and where it is odd => 0
+    (3,1) (3,2) (3,3)               so we have to check if((i+j)%2 == 0) or not 
+      1     0     1                 if yes print 1
+    (4,1) (4,2) (4,3) (4,4)         if nno print 0
+      0     1     0     1             
+
+
+       for(int i=1 ; i<n; i++){
+            for(int j= 1 ; j <= i ; j++){
+                if((i+j)%2 == 0){
+                    System.out.print("1 ");
+                } else{
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+       }
+
+##ADVANCED PATTERNS :]-
+
+Q)
+
+ *             *
+ * *         * *
+ * * *     * * *
+ * * * * * * * *    BUTTERFLY PATTERN
+ * * * * * * * *
+ * * *     * * * 
+ * *         * *
+ *             *  
+
+ Ans=>  
+   1 1 1 1 1 1                                              now we see that the spaces are in order or multiple of 2
+ * | | | | | | *  ->  1 star | 6 spaces | 1 star            2*3=6
+ * * | | | | * *  ->  2 star | 4 spaces | 2 star            2*2=4
+ * * * | | * * *  ->  3 star | 2 spaces | 3 star            2*1=2
+ * * * * * * * *  ->  4 star | 0 spaces | 4 star            2*0=0
+ --------------------   if we divided this pattern          so the condition sould be 2*(n-i) for spaces
+ * * * * * * * *
+ * * *     * * *      [This down part is flip of the up part so it can make easily by inverted the conditions] 
+ * *         * *
+ *             *  
+
+
+
+ 
+       for(int i=1; i<=n; i++){
+            for(int j=1 ; j<=i ;j++){
+                System.out.print("*");
+            }
+            for(int j = 1 ; j<=(2*(n-i)) ;j++){
+                System.out.print(" ");
+            }
+            for(int j=1 ; j<=i ;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+       }
+
+       //lower wings
+       
+       for(int i=1; i<=n; i++){
+            for(int j=n ; j>=i ;j--){
+                System.out.print("*");
+            }
+            for(int j = 1 ; j<=(2*(i-1)) ;j++){
+                System.out.print(" ");
+            }
+            for(int j=n ; j>=i ;j--){
+                System.out.print("*");
+            }
+            System.out.println();
+       }
+
+Q) 
+
+    *****
+   *****
+  *****     SOLID ROMBOS
+ *****
+*****    
+
+ANS=> In this pattern we see that we have to print only the front space after that
+      all row contains 5 star
+
+    *****   space(4)
+   *****    space(3)
+  *****     space(2)
+ *****      space(1)
+*****       space(0)
+
+
+        for(int i=1; i<=n; i++){
+           for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+           }
+
+           for(int j=1 ; j<=n; j++){
+                System.out.print("* ");
+           }
+           System.out.println();
+       }
