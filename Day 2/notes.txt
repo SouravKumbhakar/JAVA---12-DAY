@@ -375,3 +375,29 @@ ANS=> In this pattern we see that we have to print only the front space after th
            }
            System.out.println();
        }
+
+Q) 
+
+        1
+       2 2
+      3 3 3         NUMBER PYRAMID
+     4 4 4 4
+    5 5 5 5 5  
+
+
+=> in this pattern we have seen that our number is increasing but remain same for diffrent rows
+
+  int val=1;
+
+        for(i=0;i<=n;i++){
+            int k=40-3*i;
+            for(int p=0;p<k;p++){
+                System.out.print(" ");
+            }
+            for(j=0;j<=i;j++){
+                System.out.print(val+"      ");
+            }
+            System.out.println();
+            val++;
+        }
+        

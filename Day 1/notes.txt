@@ -11,7 +11,7 @@ system.out.print("hello world");
 system.out.println("hello world");
 
 // println use to shift the next line.
-// otherwise use escaoe charachter for shift to next line.
+// otherwise use escape charachter for shift to next line.
 
 ----------------------------------------------------------------------------------------------
 
