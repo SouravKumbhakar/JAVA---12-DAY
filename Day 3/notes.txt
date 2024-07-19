@@ -1,0 +1,55 @@
+Date- 19/07/24                                                                        JAVA           
+---------------                                                                  -------------
+
+-----------------------------------------------------------------------------------------------
+
+8)  Functions::
+
+In programming Functions is like a block of code which take some input and makes some operation 
+and gives us an output.  
+
+Syntax]- returnType functionName(type arg1 ,type arg2){
+            //block of code    
+        }
+
+        a) a function always return something
+        b) a function name must not be a keyword in JAVA
+        c) void type of function does not retun any value
+        d) public static void main() is also a void function
+
+practice)) print a name in a function (check function.java file)        
+
+** What happens in memory??
+------>> 
+
+p s v newfunction(){
+    //operation                           in Java every memory is stored in stack format              
+}                                         i.e. one after another like books.  
+                                          the stack in which something stored is called [stack frame[  
+p s v main(){                               
+    //operation                            ----------------------- 
+}                                          |                     |
+                                           |                     |
+                                           -----------------------
+                                            ----------------------- 
+                                           |                     |       And then when new function work
+                                           |                     |       done this stack frame removed   
+                                           -----------------------       same as main.   
+                                           ----------------------- 
+                                           |      new            |
+                                           |        function     |  <--|
+                                          -----------------------      |  
+                                           -----------------------     | main function calls new function
+                                           |    main             | <---|
+                                           |      function       |
+                                           -----------------------  ---------------->> STACK FRAME
+
+                                                    STACK
+
+
+[problems] 
+
+
+9) TIME AND SPACE COMPLEXITY::
+
+    *)Time complexity is the relation between the input size and the runninng time

@@ -401,3 +401,5 @@ Q)
             val++;
         }
         
+
+Q) Dimond pattern -->> Homework        
